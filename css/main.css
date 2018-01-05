@@ -113,7 +113,7 @@ a {
 /*============
 Nav
 =============*/
-.mainwrapper, nav, article {
+.mainwrapper, nav, article, .grid, footer, footer section {
     display: flex;
 }
 
@@ -238,7 +238,6 @@ Section 3*/
 
 @media screen and (min-width: 600px) {
   .grid {
-    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
   }
@@ -290,14 +289,48 @@ CSS :
 /*============
 Foot
 =============*/
-
-
 footer {
+    margin 0;
+}
 
+footer a {
+    text-decoration: none;
+    color: #333;
+}
+
+footer section:nth-child(1) {
+    background-color: grey;
+    width: 100%;
+    padding: 30%;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer section p, footer section h1 {
+    color: white;
 }
 
 
+form {
+    display: inline-flex;
+    padding: 20px
+}
 
+form input, form button {
+    margin: 30px;
+}
+
+button#submit {
+    border: none;
+    background-color: tomato;
+    color: white;
+}
+
+footer section:nth-child(2) {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
 
 
 
