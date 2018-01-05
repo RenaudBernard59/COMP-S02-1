@@ -1,0 +1,9 @@
+Police de caractères :
+    Lato (disponible sur Google Fonts)
+    
+Couleurs :
+    Par défaut : #333
+    Menu et icones du menu : #929292
+    Survol lien du menu : #ef4f4f (sera également souligné de la même couleur)
+    Liens : #0099cc
+    Support téléphonique : #ef4f4f
