@@ -164,6 +164,7 @@ Main
 article {
     display: flex;
     background-image: url("../img/phone.jpg");
+    background-size: 100%;
     min-height: 100vh;
 }
 
@@ -180,7 +181,6 @@ section button {
     border: 1px solid black;
     background-color: rgba(0,0,0,0);
     background-position: center;
-    border-image-width: inherit;
 }
 
 
