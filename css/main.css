@@ -160,10 +160,15 @@ nav div:hover:not(:first-child) {
 Main
 =============*/
 
-
 article {
     display: flex;
+    background-color: lightgrey;
+}
+
+
+article:first-child {
     background-image: url("../img/phone.jpg");
+    background-repeat: no-repeat;
     background-size: 100%;
     min-height: 100vh;
 }
@@ -195,6 +200,12 @@ hgroup h2 {
     padding: 0;
     font-size: 2em;
 }
+
+article section {
+    width: 100%/3;
+    text-align: center;
+}
+
 
 
 
