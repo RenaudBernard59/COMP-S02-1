@@ -101,7 +101,13 @@ All
 =============*/
 
 * {
-    font-family: arial, sansms;
+    font-family: "Lato", "arial", "sansms";
+    color: #333;
+}
+
+a {
+    color: #0099cc
+
 }
 
 /*============
@@ -127,7 +133,7 @@ nav {
 
     /*Deco*/
     background-color: white;
-    color: darkgrey;
+    color: #929292;
 }
 
 
@@ -144,8 +150,8 @@ nav div:first-child {
 
 }
 
-nav div.active {
-    color: red;
+nav div:hover:not(:first-child) {
+    color: #ef4f4f;
     border-bottom: red 5px solid;
     font-weight: bold;
 }
@@ -157,7 +163,7 @@ Main
 
 article {
     display: flex;
-    background-image: url("../img/phone.png");
+    background-image: url("../img/phone.jpg");
     min-height: 100vh;
 }
 
