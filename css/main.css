@@ -109,13 +109,17 @@ a {
     color: #0099cc
 
 }
-
-/*============
-Nav
-=============*/
-.mainwrapper, nav, article, .grid, footer, footer section {
+.mainwrapper, nav, article, .grid, footer section, footer section div {
     display: flex;
 }
+
+.shrink {
+    flex-shrink: 2;
+}
+
+/*=======================================================================
+Nav
+=======================================================================*/
 
 
 header h1 {
@@ -145,6 +149,7 @@ nav div {
     justify-content: center;
     padding: 2px 10px 2px 10px;
     margin: auto;
+    flex-shrink: 1;
 }
 
 nav div:first-child {
@@ -159,9 +164,9 @@ nav div:hover:not(:first-child) {
     font-weight: bold;
 }
 
-/*============
+/*=======================================================================
 Main
-=============*/
+=======================================================================*/
 main {
     flex-direction: column;
 }
@@ -172,7 +177,14 @@ article {
     flex-wrap: wrap;
 }
 
-/*============
+article section {
+    margin: auto;
+    text-align: center;
+    width: 100%/3;
+    min-height: 200px;
+}
+
+/*=======================================================================
 Section 1*/
 
 article:first-child {
@@ -182,14 +194,16 @@ article:first-child {
     min-height: 100vh;
 }
 
-article section {
-    margin: auto;
-    margin-left: 10%;
 
+
+main article:first-child section {
+    margin-left: 10%;
+    text-align: left;
 }
 
 section button {
     text-align: center;
+    margin-bottom: 20px;
     padding: 10px;
     width: 200px;
     border: 1px solid black;
@@ -211,17 +225,14 @@ hgroup h2 {
 }
 
 
-/*============
+/*=======================================================================
 Section 2*/
 
-article section {
-    text-align: center;
-    width: 100%/3;
-    min-height: 200px;
-}
 
-/*============
+/*========================================================================
 Section 3*/
+
+/*==========Photos==========*/
 .grid {
     background-color: white;
 }
@@ -252,6 +263,7 @@ Section 3*/
   }
 }
 
+/*==========Addon==========*/
 .addoncel {
     position: relative;
 }
@@ -266,10 +278,10 @@ Section 3*/
 
 .addon div{
     padding: 10px;
+
 }
 .addon div, .fa-plus-circle {
     margin: auto;
-    
     justify-content: space-between: ;
 }
 
@@ -280,44 +292,54 @@ Section 3*/
 }
 
 
-30 Dec 2015 à 15:05
-Merci énormément pour votre aide. Je me suis finalement inspiré des 2 réponses en maintenant l'image dans le code et en utilisant un positionnement relatif sur le parent et un positionnement absolu sur les enfants. Mon code avec 2 lignes de texte et un tableau pour les choix :
-
-CSS :
-
-
-/*============
-Foot
-=============*/
-footer {
-    margin 0;
-}
+/*=======================================================================
+Footer
+=======================================================================*/
 
 footer a {
     text-decoration: none;
     color: #333;
 }
 
+footer section {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer section div {
+    flex-shrink: 1;
+}
+
+/*========================================================================
+Section 1*/
+
 footer section:nth-child(1) {
     background-color: grey;
-    width: 100%;
-    padding: 30%;
     flex-direction: column;
     text-align: center;
+
+}
+
+footer > section:nth-child(1) 
+{
+       padding: 50px;
 }
 
 footer section p, footer section h1 {
     color: white;
+    padding: 5px;
+    margin: 5px;
 }
-
 
 form {
     display: inline-flex;
-    padding: 20px
+    padding: 10px;
+    margin: auto;
 }
 
 form input, form button {
     margin: 30px;
+    width: 300px; 
 }
 
 button#submit {
@@ -326,16 +348,23 @@ button#submit {
     color: white;
 }
 
+/*========================================================================
+Section 2*/
+
 footer section:nth-child(2) {
     background-color: white;
-    display: flex;
-    flex-direction: row;
+    padding: 20px;
 }
 
 
+footer section:nth-child(2) div {
+    justify-content: space-between;
+    margin: 0 5px;
+}
 
-
-
+.p-tel a {
+    color: tomato;
+}
 
 
 /* ==========================================================================
