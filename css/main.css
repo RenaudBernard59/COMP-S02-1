@@ -113,6 +113,10 @@ a {
 /*============
 Nav
 =============*/
+.mainwrapper, nav, article {
+    display: flex;
+}
+
 
 header h1 {
     display: none;
@@ -124,7 +128,6 @@ img.logo {
 
 nav {
     /*Display*/
-    display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
@@ -159,12 +162,18 @@ nav div:hover:not(:first-child) {
 /*============
 Main
 =============*/
-
-article {
-    display: flex;
-    background-color: lightgrey;
+main {
+    flex-direction: column;
 }
 
+article {
+    
+    background-color: lightgrey;
+    flex-wrap: wrap;
+}
+
+/*============
+Section 1*/
 
 article:first-child {
     background-image: url("../img/phone.jpg");
@@ -201,13 +210,73 @@ hgroup h2 {
     font-size: 2em;
 }
 
+
+/*============
+Section 2*/
+
 article section {
-    width: 100%/3;
     text-align: center;
+    width: 100%/3;
+    min-height: 200px;
+}
+
+/*============
+Section 3*/
+.grid {
+    background-color: white;
 }
 
 
+.respondimg {
+    max-width: 100%
+}
 
+.cell img {
+  display: block;
+}
+
+
+@media screen and (min-width: 600px) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .cell {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .cell {
+    width: calc(100% / 3);
+  }
+}
+
+.addon {
+    background-color: #333;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    bottom: 0;
+}
+
+.addon div{
+    justify-content: space-between;
+}
+
+.addon div p, .fa-plus-circle {
+    color: white;
+    
+}
+
+.addon div p {
+    font-size: 80%;
+}
+
+ .fa-plus-circle {
+    font-size: 5em;
+ }
 
 
 /*============
