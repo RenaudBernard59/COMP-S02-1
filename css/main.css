@@ -253,30 +253,38 @@ Section 3*/
   }
 }
 
-.addon {
-    background-color: #333;
-    display: flex;
+.addoncel {
     position: relative;
-    flex-direction: row;
+}
+
+.addon {
+    display: inline-flex;
+    background-color: #333;
+    width: 100%;
+    position: absolute;
     bottom: 0;
 }
 
 .addon div{
-    justify-content: space-between;
+    padding: 10px;
+}
+.addon div, .fa-plus-circle {
+    margin: auto;
+    
+    justify-content: space-between: ;
 }
 
 .addon div p, .fa-plus-circle {
     color: white;
-    
-}
-
-.addon div p {
     font-size: 80%;
+
 }
 
- .fa-plus-circle {
-    font-size: 5em;
- }
+
+30 Dec 2015 à 15:05
+Merci énormément pour votre aide. Je me suis finalement inspiré des 2 réponses en maintenant l'image dans le code et en utilisant un positionnement relatif sur le parent et un positionnement absolu sur les enfants. Mon code avec 2 lignes de texte et un tableau pour les choix :
+
+CSS :
 
 
 /*============
